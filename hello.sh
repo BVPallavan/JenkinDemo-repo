@@ -1,2 +1,3 @@
-#!/bin/bash  SASASAS
+#!/bin/bash
 echo "Hello, Jenkins! Build triggered successfully."
+echo "Thank You."
