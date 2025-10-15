@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Push Code') {
       steps {
-        sshagent(['github-ssh']) {
+        sshagent(['git-hub-ssh']) {
           sh 'git push origin HEAD:master'
         }
       }
