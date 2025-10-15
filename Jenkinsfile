@@ -1,9 +1,12 @@
-{
-  "name": "web",
-  "active": true,
-  "events": ["push"],
-  "config": {
-    "url": "https://github.com/BVPallavan/JenkinDemo-repo/github-webhook/",
-    "content_type": "json"
+pipeline {
+  agent any
+  stages {
+    stage('Clone Repo') {
+      steps {
+        sshagent(['github-ssh-key']) {
+          sh 'git clone git@github.com:username/repo.git'
+        }
+      }
+    }
   }
 }
